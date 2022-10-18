@@ -2,6 +2,7 @@ package com.easybuy.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
 
@@ -20,6 +21,7 @@ public class DataSourceConfig {
     String password;
 
 
+    @Bean
     public DataSource getDataSource() {
         fetchCredentials();
 

@@ -25,7 +25,7 @@ public class Cart {
     private Set<CartItem> cartItems;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable=false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "cart")
@@ -55,36 +55,36 @@ public class Cart {
         this.cartItems = cartItems;
     }
 
-    public void setCartId(Integer cartId) {
-        this.cartId = cartId;
-    }
-
     public Integer getCartId() {
         return cartId;
     }
 
-    public void setSessionId(Integer sessionId) {
-        this.sessionId = sessionId;
+    public void setCartId(Integer cartId) {
+        this.cartId = cartId;
     }
 
     public Integer getSessionId() {
         return sessionId;
     }
 
-    public void setCartStatus(Integer cartStatus) {
-        this.cartStatus = cartStatus;
+    public void setSessionId(Integer sessionId) {
+        this.sessionId = sessionId;
     }
 
     public Integer getCartStatus() {
         return cartStatus;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setCartStatus(Integer cartStatus) {
+        this.cartStatus = cartStatus;
     }
 
     public Integer getUserId() {
         return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Override
