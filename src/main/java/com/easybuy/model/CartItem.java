@@ -24,11 +24,11 @@ public class CartItem {
     private Integer cartId;
 
     @ManyToOne
-    @JoinColumn(name="cart_id", nullable=false)
+    @JoinColumn(name="cart_id", nullable=false, insertable = false, updatable = false)
     private Cart cart;
 
     @ManyToOne
-    @JoinColumn(name="product_id", nullable = false)
+    @JoinColumn(name="product_id", nullable = false, insertable = false, updatable = false)
     private Product product;
 
     public Product getProduct() {

@@ -21,7 +21,7 @@ public class Order {
     private String orderStatus;
 
     @ManyToOne
-    @JoinColumn(name="cart_id", nullable=false)
+    @JoinColumn(name="cart_id", nullable=false, insertable = false, updatable = false)
     private Cart cart;
 
     public Cart getCart() {
@@ -41,7 +41,7 @@ public class Order {
     }
 
     @ManyToOne
-    @JoinColumn(name = "payment_id", nullable = false)
+    @JoinColumn(name = "payment_id", nullable = false, insertable = false, updatable = false)
     private Payment payment;
 
     public void setOrderId(Integer orderId) {

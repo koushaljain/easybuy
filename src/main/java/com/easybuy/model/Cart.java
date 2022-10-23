@@ -25,7 +25,7 @@ public class Cart {
     private Set<CartItem> cartItems;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
     private User user;
 
     @OneToMany(mappedBy = "cart")

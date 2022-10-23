@@ -1,8 +1,10 @@
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/easybuy
-    authDatabase: easybuy
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/easybuy1
+    username: root
+    password: root
+    authDatabase: easybuy1
   jpa:
     hibernate:
       ddl-auto: update

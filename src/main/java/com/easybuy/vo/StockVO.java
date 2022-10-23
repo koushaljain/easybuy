@@ -1,7 +1,5 @@
 package com.easybuy.vo;
 
-import javax.persistence.Column;
-
 public class StockVO {
     private Integer stockId;
 

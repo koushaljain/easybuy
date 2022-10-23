@@ -1,28 +1,19 @@
 package com.easybuy.vo;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 public class UserVO {
     private Integer userId;
     private String userName;
     private String userPass;
     private String firstName;
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     private String lastName;
     private String address;
     private Integer mobile;
     private String email;
+
+    @Override
+    public String toString() {
+        return "UserVO{" + "userId=" + userId + ", userName='" + userName + '\'' + ", userPass='" + userPass + '\'' + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='" + address + '\'' + ", mobile=" + mobile + ", email='" + email + '\'' + '}';
+    }
 
     public Integer getUserId() {
         return userId;
@@ -62,6 +53,14 @@ public class UserVO {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Integer getMobile() {

@@ -25,11 +25,11 @@ public class Product {
     private Integer stockId;
 
     @ManyToOne
-    @JoinColumn(name="stock_id", nullable=false)
+    @JoinColumn(name="stock_id", nullable=false, insertable = false, updatable = false)
     private Stock stock;
 
     @ManyToOne
-    @JoinColumn(name="category_id", nullable=false)
+    @JoinColumn(name="category_id", nullable=false, insertable = false, updatable = false)
     private Category category;
 
     @OneToMany(mappedBy = "product")

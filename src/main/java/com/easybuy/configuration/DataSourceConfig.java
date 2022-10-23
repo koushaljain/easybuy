@@ -5,6 +5,8 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DataSourceConfig {
 
@@ -24,7 +26,6 @@ public class DataSourceConfig {
     @Bean
     public DataSource getDataSource() {
         fetchCredentials();
-
         final DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
 
         dataSourceBuilder.driverClassName(driverClassName);
