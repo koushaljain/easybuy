@@ -3,7 +3,7 @@ package com.easybuy.vo;
 public class StockVO {
     private Integer stockId;
 
-    private String stockCount;
+    private Integer stockCount;
 
     public Integer getStockId() {
         return stockId;
@@ -13,11 +13,11 @@ public class StockVO {
         this.stockId = stockId;
     }
 
-    public String getStockCount() {
+    public Integer getStockCount() {
         return stockCount;
     }
 
-    public void setStockCount(String stockCount) {
+    public void setStockCount(Integer stockCount) {
         this.stockCount = stockCount;
     }
 }

@@ -13,7 +13,7 @@ public class Stock {
     private Integer stockId;
 
     @Column(name = "stock_count")
-    private String stockCount;
+    private Integer stockCount;
 
     @OneToMany(mappedBy = "stock")
     private Set<Product> products;
@@ -34,11 +34,11 @@ public class Stock {
         return stockId;
     }
 
-    public void setStockCount(String stockCount) {
+    public void setStockCount(Integer stockCount) {
         this.stockCount = stockCount;
     }
 
-    public String getStockCount() {
+    public Integer getStockCount() {
         return stockCount;
     }
 

@@ -4,10 +4,11 @@ import com.easybuy.model.Product;
 import com.easybuy.repository.ProductRepository;
 import com.easybuy.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class ProductService {
 
     @Autowired
@@ -30,10 +31,10 @@ public class ProductService {
 
     public Integer saveProduct(ProductVO productVO){
         Product product = new Product();
-        productVO.setProductName(product.getProductName());
-        productVO.setProductPrice(product.getProductPrice());
-        productVO.setCategoryId(product.getCategoryId());
-        productVO.setStockId(product.getStockId());
+        product.setProductName(productVO.getProductName());
+        product.setProductPrice(productVO.getProductPrice());
+        product.setCategoryId(productVO.getCategoryId());
+        product.setStockId(productVO.getStockId());
         Product savedProduct = productRepository.save(product);
         return savedProduct.getProductId();
     }
